@@ -1,0 +1,148 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv
+virtualenv/
+
+# IDE & Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+.project
+.pydevproject
+.settings/
+
+# Testing & Coverage
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.hypothesis/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Git
+.git/
+.gitignore
+
+# Docker
+Dockerfile
+docker-compose.yml
+.dockerignore
+.docker/
+
+# Logs
+*.log
+logs/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+resumes.db
+postgres_data/
+
+# Data & Uploads
+data/
+uploads/
+temp/
+cache/
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+.directory
+.AppleDouble
+.LSOverride
+
+# Backups
+*.bak
+*.backup
+*~
+
+# Node (if using frontend tools)
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Package managers
+.pip-cache/
+poetry.lock
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+
+# Project specific
+analysis_results/
+temp_resumes/
+test_data/
+
+# IDE Specific
+.vscode/launch.json
+.vscode/settings.json
+.idea/workspace.xml
+.idea/tasks.xml
+
+# OS Specific
+.env.prod
+.env.test
+
+# Sensitive data
+secrets/
+keys/
+credentials/
+
+# Build artifacts
+*.dist
+build/
+dist/
+
+# Coverage reports
+.coverage
+coverage.xml
+*.cover
+
+# mypy
+.mypy_cache/
+.dmypy.json
+dmypy.json

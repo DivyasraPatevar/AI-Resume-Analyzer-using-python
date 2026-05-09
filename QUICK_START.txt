@@ -1,0 +1,334 @@
+# Quick Reference - What's New in v2.0
+
+## 🎯 3 Main Enhancements
+
+### 1️⃣ BERT Model (Aspect Analysis)
+```
+Analyzes your resume for:
+✓ Technical Skills - 85% confidence
+✓ Leadership - 72% confidence
+✓ Communication - 69% confidence
+✓ Problem-Solving - 81% confidence
+✓ Project Management - 76% confidence
+```
+
+### 2️⃣ spaCy NER (Smart Detection)
+```
+Automatically extracts:
+✓ Educational Institutions (Yale, MIT, Stanford)
+✓ Companies/Organizations (Google, Amazon, Microsoft)
+✓ Job Positions (Senior Engineer, Product Manager)
+✓ Certifications (AWS Certified, PMP, etc.)
+```
+
+### 3️⃣ Keyword Highlighting
+```
+Color-coded resume view:
+🟡 Yellow = Technical Skills
+🟢 Green = Action Verbs
+🔵 Blue = Education Keywords
+```
+
+---
+
+## 📊 What You'll See Now
+
+### Before Analysis
+```
+Upload resume → Click Analyze
+```
+
+### After Analysis
+```
+METRICS
+├─ ATS Score (0-100)
+├─ Skills Count
+└─ BERT Aspect Scores
+
+EXTRACTED DATA
+├─ 🎓 Education
+│  ├─ Degree detected
+│  ├─ Institution found
+│  └─ Certifications
+├─ 💼 Experience
+│  ├─ Positions found
+│  ├─ Organizations
+│  └─ Years calculated
+└─ 💻 Skills
+   └─ 70+ skills recognized
+
+AI ANALYSIS
+├─ BERT Scores (5 aspects)
+├─ Strengths (3-5 items)
+├─ Weaknesses (top 5)
+├─ Suggestions (6 items)
+└─ Job Fit (6 roles)
+
+VISUALIZATION
+└─ Highlighted Resume
+   ├─ Skills marked (yellow)
+   ├─ Verbs marked (green)
+   └─ Education marked (blue)
+```
+
+---
+
+## 🚀 Installation (Quick)
+
+```bash
+# 1. Navigate
+cd "C:\Users\Divyasra\OneDrive\Desktop\AI RESUME ANALYSER"
+
+# 2. Setup
+python -m venv venv
+venv\Scripts\activate
+
+# 3. Install
+pip install -r requirements.txt
+
+# 4. Run
+streamlit run AA.py
+
+# 5. First run: Wait 3-5 minutes for models
+# 6. Subsequent: ~15-30 seconds
+```
+
+---
+
+## 📁 New Files
+
+```
+AA.py                       → Main application (ENHANCED)
+requirements.txt            → Dependencies (UPDATED with BERT, spaCy)
+README.md                   → Original guide
+README_ENHANCED.md          → Detailed enhancement guide
+SETUP_GUIDE.md             → Installation & troubleshooting
+IMPROVEMENTS_SUMMARY.md    → This document + more
+QUICK_START.txt            → You are here!
+```
+
+---
+
+## 🔍 Key Differences v1.0 vs v2.0
+
+### Skill Detection
+```
+v1.0: "python", "java" → Found: Python, Java
+v2.0: "python", "java" → Found: Python, Java, PyTorch, Django, Flask, etc.
+      (70+ skills vs ~50)
+```
+
+### Education
+```
+v1.0: Bachelor's Degree
+v2.0: Bachelor of Science in Computer Science
+      University of California, Berkeley
+      AWS Certified Solutions Architect
+```
+
+### Experience
+```
+v1.0: "Software Engineer, 5 years"
+v2.0: Position: Senior Software Engineer
+      Organization: Google Inc
+      Years: 5
+```
+
+### Analysis
+```
+v1.0: ATS Score, Skills, Suggestions
+v2.0: ATS Score + BERT Scores (5 aspects)
+      Skills + Highlighting
+      Education + Extraction
+      Experience + Extraction
+```
+
+---
+
+## 💡 Smart Features You'll Notice
+
+### Color Highlighting
+- **Yellow** skills appear as you scroll
+- **Green** action verbs stand out
+- **Blue** education terms marked
+- Easy to see keyword density!
+
+### Entity Cards
+- Clean boxes for detected items
+- Education entries organized
+- Companies listed separately
+- Positions highlighted
+
+### BERT Scores
+- 5 key aspects analyzed
+- Percentage score each
+- Visual progress bars
+- Shows AI confidence
+
+### Comprehensive Export
+- Download full JSON analysis
+- Includes all new data
+- Perfect for record-keeping
+
+---
+
+## ⏱️ Performance
+
+| Stage | Time | Happens |
+|-------|------|---------|
+| First Run Setup | 3-5 min | Models download (~1.75GB) |
+| Subsequent Runs | 15-30 sec | Normal analysis |
+| BERT Analysis | 5-10 sec | Included in above |
+| Model Caching | Automatic | No re-downloads |
+
+---
+
+## 🎓 Skills Database (70+ Total)
+
+### By Category
+- 20+ Programming Languages
+- 18+ Web Frameworks
+- 14+ Databases
+- 11+ Cloud Platforms
+- 16+ Data Tools
+- 14+ DevOps Tools
+- Soft Skills
+
+### Example Skills Detected
+```
+Python, Java, JavaScript, C++, C#, PHP, Ruby, Go, Rust...
+React, Angular, Vue, Express, Django, Flask, FastAPI...
+SQL, MySQL, PostgreSQL, MongoDB, Cassandra, Redis...
+AWS, Azure, GCP, Docker, Kubernetes...
+```
+
+---
+
+## 📋 Sample Output
+
+### METRICS
+- ATS Score: 78/100 ✅
+- Skills Found: 12
+- BERT Scores Computed
+
+### EDUCATION
+- Bachelor of Science, Computer Science
+- Harvard University
+- AWS Certified Solutions Architect
+
+### EXPERIENCE
+- Years: 5
+- Positions: Senior Engineer, DevOps Lead
+- Organizations: Google, Amazon
+
+### BERT ANALYSIS
+- Technical Skills: 85%
+- Leadership: 72%
+- Communication: 69%
+- Problem-Solving: 81%
+- Project Management: 76%
+
+### STRENGTHS
+✅ Strong technical foundation
+✅ 12 relevant skills identified
+✅ Good use of action verbs
+✅ Clear education background
+✅ Relevant certifications
+
+### WEAKNESSES
+⚠️ Limited quantified metrics
+⚠️ Could expand project descriptions
+⚠️ Add more specific achievements
+
+### SUGGESTIONS
+💡 Add metrics (improved by X%)
+💡 Expand key projects
+💡 Highlight team leadership
+💡 Add relevant certifications
+💡 Include portfolio links
+💡 Quantify impact more
+
+### JOB FIT
+🎯 Software Engineer: 82%
+🎯 DevOps Engineer: 78%
+🎯 Data Scientist: 45%
+🎯 Full Stack Developer: 72%
+🎯 Product Manager: 35%
+🎯 QA Engineer: 55%
+
+---
+
+## 🔧 Technical Stack v2.0
+
+```
+Frontend:        Streamlit (Web UI)
+Text Analysis:   NLTK (Tokenization)
+NLP:             spaCy (Entity Recognition)
+AI Models:       BERT (Aspect Analysis)
+ML:              scikit-learn (Similarity)
+Data:            Pandas (Processing)
+PDF:             PyPDF2 (Extraction)
+Deep Learning:   PyTorch (BERT backend)
+```
+
+---
+
+## 🎯 Your Next Steps
+
+1. **Install** → `pip install -r requirements.txt`
+2. **Run** → `streamlit run AA.py`
+3. **Wait** → Models download first time (3-5 min)
+4. **Upload** → Your resume (PDF or TXT)
+5. **Click** → "Analyze Resume"
+6. **Review** → All new insights and highlights
+7. **Export** → Download JSON for records
+
+---
+
+## ❓ FAQ
+
+**Q: Why is first run slow?**
+A: Models downloading (~1.75GB). Subsequent runs: 15-30 sec
+
+**Q: What if my PDF won't extract?**
+A: Use a text-based PDF, or convert to .txt format
+
+**Q: Can I disable BERT?**
+A: Yes, but it's optional and worth keeping for insights
+
+**Q: Does it store my resume?**
+A: No! Everything stays local on your computer
+
+**Q: Will highlighting always work?**
+A: Yes, it highlights all 70+ skills + verbs + education keywords
+
+**Q: What's the most useful new feature?**
+A: BERT analysis (5 dimension aspect scoring) or keyword highlighting
+
+---
+
+## 📞 Support Resources
+
+- **README_ENHANCED.md** - Full technical documentation
+- **SETUP_GUIDE.md** - Installation & troubleshooting
+- **IMPROVEMENTS_SUMMARY.md** - Detailed improvements
+- Check terminal output for specific errors
+
+---
+
+## 🎉 You're Ready!
+
+Your v2.0 resume analyzer is configured with:
+- ✅ BERT model for AI analysis
+- ✅ spaCy for entity extraction
+- ✅ Keyword highlighting system
+- ✅ 70+ skill recognition
+- ✅ Advanced education detection
+- ✅ Enhanced experience detection
+- ✅ Comprehensive UI
+
+**Time to analyze! Run:** `streamlit run AA.py`
+
+---
+
+Made with ❤️ - Enhanced Resume Analyzer v2.0

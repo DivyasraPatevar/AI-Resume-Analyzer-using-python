@@ -1,0 +1,76 @@
+version: '3.8'
+
+services:
+  # FastAPI Backend
+  api:
+    build: .
+    container_name: ai-resume-api
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=sqlite:///./data/resumes.db
+      - PYTHONUNBUFFERED=1
+    volumes:
+      - ./data:/app/data
+      - ./database:/app/database
+      - ./api:/app/api
+    command: python -m uvicorn api.main:app --host 0.0.0.0 --port 8000 --reload
+    depends_on:
+      - postgres
+    networks:
+      - resume-network
+
+  # PostgreSQL Database (optional - for production)
+  postgres:
+    image: postgres:15-alpine
+    container_name: ai-resume-db
+    environment:
+      - POSTGRES_USER=resume_user
+      - POSTGRES_PASSWORD=secure_password
+      - POSTGRES_DB=ai_resume_analyzer
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - resume-network
+
+  # Streamlit Frontend
+  frontend:
+    build: .
+    container_name: ai-resume-frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONUNBUFFERED=1
+      - API_URL=http://api:8000
+    volumes:
+      - ./AA.py:/app/AA.py
+      - ./data:/app/data
+    command: streamlit run AA.py --server.port=8501 --server.address=0.0.0.0
+    depends_on:
+      - api
+    networks:
+      - resume-network
+
+  # Nginx Reverse Proxy (optional)
+  nginx:
+    image: nginx:latest
+    container_name: ai-resume-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    depends_on:
+      - api
+      - frontend
+    networks:
+      - resume-network
+
+volumes:
+  postgres_data:
+
+networks:
+  resume-network:
+    driver: bridge
